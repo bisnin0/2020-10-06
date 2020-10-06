@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- 
+	https://github.com/stevenwanderski/bxslider-4에서 다운로드
+	1. jquery
+	2. easing 스크립트 파일
+	3. bxslider 스크립트 파일
+	4. bxslider 스타일시트 파일
+	5. 컨트롤러 이미지폴더
+	
+ -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+<script src="plugin/jquery.easing.1.3.js"></script>
+<script src="plugin/jquery.bxslider.js"></script>
+<link rel="stylesheet" href="plugin/jquery.bxslider.css" type="text/css"/>
+<style>
+	#bxslider img{
+		width:800px;
+		height:450px;
+		margin:0 auto;
+	}
+	#aa{
+		width:800px;
+		height:550px;
+		margin:0 auto;
+	}
+	ul, li{
+		margin:0px;
+		padding:0px;
+	}
+</style>
+<script>
+	$(function(){
+		$("#bxslider").bxSlider({
+			mode : 'horizontal'//화면 전환 방법 'horizontal(기본)', 'vertical', 'fade'
+			,slideWidth:800
+			,slideHeight:500
+			,speed:2000 //변환속도
+			,auto:true //자동시작(true, false(기본))
+			,randomStart:true//시작슬라이드 랜덤(true, false(기본))
+			,captions:true //title속성의 값을 설명으로 표시한다(true, false(기본))
+			,infiniteLoop:false //반복할건지 말건지 (true(기본), false)
+			,hideControlOnEnd:true //처음과 마지막에 컨트롤러 표시 여부 설정(true, flase(기본).. 이걸 사용하려면 infiniteLoop를 false로 해서 반복을 꺼줘야한다.)
+			//easing
+			,useCSS:false //easing사용 여부 설정(true(easing사용안함),  false(easing사용))
+			,easing:'easeOutElastic'
+			//콜백함수
+			,onSliderLoad:function(){//슬라이드 로딩이 완료되면 호출된다. Slider다.
+				$("#msg").append("슬라이드 로딩이 완료되었습니다.");
+			}
+			,onSlideAfter:function(){//슬라이드가 움직인후 호출되는 함수.. 주의할점은 Slider가 아니라 Slide라는것. 
+				$("#msg").append("<br/>슬라이드가 움직인후 호출되는 함수");
+			}
+			
+			
+		});
+	});
+</script>
+</head>
+<body>
+<div id="aa">
+	<ul id="bxslider">
+		<li><a href="#"><img src="../img/2.png" title="1번 슬라이드"/></a></li>
+		<li><a href="#"><img src="../img/3.png" title="2번 슬라이드"/></a></li>
+		<li><a href="#"><img src="../img/1.gif" title="3번 슬라이드"/></a></li>
+		<li><a href="#"><img src="../img/31.jpg" title="4번 슬라이드"/></a></li>
+		<li><a href="#"><img src="../img/flower.png" title="5번 슬라이드"/></a></li>
+		<li><a href="#"><img src="../img/k1.jpg" title="6번 슬라이드"/></a></li>
+		<li><a href="#"><img src="../img/33.jpg" title="7번 슬라이드"/></a></li>
+		<li><a href="#"><img src="../img/32.jpg" title="8번 슬라이드"/></a></li>
+	</ul>
+</div>
+<div id="msg"></div>
+</body>
+</html>

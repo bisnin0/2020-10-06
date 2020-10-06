@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<meta name="viewport" content="width=device, initial-scale=1"/> 
+<link rel="stylesheet" href="bootstrap.css" type="text/css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+<script src="bootstrap.js"></script>
+<style>
+	.row{background:lightblue}
+</style>
+</head>
+<body>
+<div class="container" style="background:pink">
+	<!-- 
+		.row : 1줄을 표시한다. (float:left느낌)
+		.col-*-* 으로 칸의 크기 설정 
+			첫번째 *: 칸의 크기(sm, md, lg, xl)
+			 ..... 창의 크기와 관련되어있다. 사용하는 스크린 사이즈가 뭐냐에따라 스크린사이즈에 맞게 적용한다. 모바일 어플과 데스크탑 화면마다 다르게 적용 가능)
+			예를들면
+			        <div class="col-lg-4 col-sm-6">4열 길이, 작은 화면에서는 6열 길이 </div>
+            		<div class="col-lg-4 col-sm-6"> 4열 길이, 작은 화면에서는 6열 길이 </div>
+            		<div class="col-lg-4 col-sm-12"> 4열 길이, 작은 화면에서는 12열 길이 </div>
+			
+			두번째 *: 칸의 1줄을 12로 나누어 칸의 크기를 할당한다.
+			 
+			... ex) .col-sm-4  = 칸의 크기는 12칸중에 4개를 할당
+			
+	
+	
+	 -->
+	<div class="row"> <!-- 이게 한줄이라는뜻 -->
+		<div class="col-lg-4">첫번째 칸</div>
+		<div class="col-lg-2">두번째 칸</div>
+		<div class="col-lg-4">세번째 칸</div>
+		<div class="col-lg-2">네번째 칸</div>
+	</div>
+	<hr/>
+	<div class="row"> <!-- 이게 한줄이라는뜻 -->
+		<div class="col-sm-4">첫번째 칸</div>
+		<div class="col-sm-2">두번째 칸</div>
+		<div class="col-sm-4">세번째 칸</div>
+		<div class="col-sm-2">네번째 칸</div>
+	</div>
+</div>
+</body>
+</html>

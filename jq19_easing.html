@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- 
+easing 환경설정
+	https://jqueryui.com/easing/
+
+	https://jqueryui.com/download/all/에서 다운로드 한다.
+	1. jquery-ui.min.css
+	2. jquery-3.5.1.min.js
+	3. jquery-ui.min.js
+
+ -->
+
+<link rel="stylesheet" href="jquery-ui.min.css" type="text/css"> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="jquery-ui.min.js"></script> 
+<style>
+	img{
+		width:100px;
+		height:100px;
+		position:absolute;
+	}
+
+</style>
+<script>
+	$(function(){
+		//																easing:움직이는 모양
+		$("#i1").animate({marginLeft:"1000px", marginTop:"600px"}, 5000, "easeOutBounce");
+		$("#i10").delay(500).animate({marginLeft:"500px", marginTop:"800px"}, 5000, "easeInBounce");
+		$("#i20").delay(500).animate({marginLeft:"800px", marginTop:"700px"}, 5000, "easeOutQuint");
+	});
+</script>
+</head>
+<body>
+<img src="../img/2.png" id="i1"/>
+<img src="../img/3.png" id="i10"/>
+<img src="../img/K6.jpg" id="i20"/>
+</body>
+</html>

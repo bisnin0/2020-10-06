@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<meta name="viewport" content="width=device, initial-scale=1"/> 
+<link rel="stylesheet" href="bootstrap.css" type="text/css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+<script src="bootstrap.js"></script>
+</head>
+<body>
+<div class="container">
+	<!-- 
+		경고창 띄우기
+		.alert : 경고창 만들기
+		
+		.alert-success, .alert-info, .alert-danger, .alert-warning, alert-secondary, alert-primary
+	 -->
+	<div class="alert alert-secondary">alert대화상자 만들기</div>
+	<!-- 
+		닫기기능이 있는 경고창 띄우기
+		&times -> x 자 버튼 생성
+		
+		.close : 오른쪽으로 배치, 글자크기 조절, a태그로 생성한 밑줄과 파란글자색 사라짐
+		
+		속성			   속성값
+		data-dismiss="alert" 을 a태그에 적용하면 클릭시 대화상자가 닫힌다. 클래스가 아니라 속성이다.
+	 -->
+	 <div class="alert alert-secondary">
+	 	아이디를 입력하세요.
+	 	<a href="#" class="close" data-dismiss="alert">&times;</a> <!-- x자 버튼을 오른쪽으로 이동했다. 밑줄도 사라짐. 클릭하면 대화상자 닫힘 -->
+	 </div>
+	 
+	 <div class="alert alert-danger">
+	 	<a href="bs04_jumbotron_table.html">클릭하세요..</a>
+	 </div>
+</div>
+</body>
+</html>

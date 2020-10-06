@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- 
+	스타일시트 class의 집합..
+	getbootstrap.com에서 다운로드
+	https://getbootstrap.com/docs/4.5/getting-started/download/
+	
+	1. meta태그에 viewport 설정
+	2. bootstrap 스타일 파일 링크
+	3. jquery
+	4. bootstrap 자바스크립트 파일 링크
+ -->
+<meta name="viewport" content="width=device, initial-scale=1"/> 
+<link rel="stylesheet" href="bootstrap.css" type="text/css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+<script src="bootstrap.js"></script>
+<style>
+	.container{border:1px solid gray;} /*이미 설정이 되어있지만 재설정이 가능하다.*/
+	.container-fluid{background:lightblue;}
+</style>
+</head>
+<body>
+<!-- 
+	.container : 반응형 폭을 설정. 창을 줄리면 자동으로 container의 폭도 줄어든다.
+	.container-fluid : 화면폭을 100%로 설정
+
+
+ -->
+<div class="container"> <!-- container클래스는 이미 bootstrap에 있기때문에 클래스 입력만으로 설정이적용된다. -->
+	<h1>홈페이지 내용</h1>
+	<img src="../img/32.jpg"/>
+</div>
+<div class="container-fluid"> <!-- container클래스는 이미 bootstrap에 있기때문에 클래스 입력만으로 설정이적용된다. -->
+	<h1>홈페이지 내용</h1>
+	<img src="../img/32.jpg"/>
+</div>
+
+</body>
+</html>

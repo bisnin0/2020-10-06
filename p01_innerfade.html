@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- 
+	https://gist.github.com/coolniikou/665255
+	
+	1. jquery
+	2. innerfade.js
+
+ -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+<script src="plugin/jquery.innerfade.js"></script>
+<style>
+	ul, li{
+		list-style-type:none;
+		margin:0px;
+		padding:0px;
+	}
+	#imgInner img{
+		width:500px;
+		height:400px;
+	}
+	#imgInner{
+		width:600px;
+		height:400px;
+	}
+	div{
+		height:400px;
+	}
+	div:nth-child(2){
+		width:500px;
+		border:2px solid gray;
+		background-color:lightblue;
+		font-size:1.5em;
+	}
+	#textInner li{
+		background-color:pink;
+	}
+</style>
+<script>
+	$(function(){
+		//이미지에 innerfade 적용하기
+		$("#imgInner").innerfade({
+			animationtype: 'slide' // "slide", "fade", 기본:"fade"
+			, speed : 'slow' //속도 'slow', 'fast', 'normal', 밀리초
+			, timeout:2000 //쇼 대기시간
+			, type : 'random'// 'random(화면전환될때 랜덤으로 바뀌는것)', 'sequence(기본)', 'random_start(시작을 랜덤)'
+		});
+		
+		//텍스트에 innefade적용하기
+		$("#textInner").innerfade({
+			animationtype: 'fade' //생략하면fade지만 그냥 씀
+			, speed : 2000 //생략하면 normal
+			, timeout:5000
+			, type : 'random_start'
+		});
+		
+	});
+
+</script>
+</head>
+<body>
+<div>
+	<ul id="imgInner">
+		<li><a href="https://www.naver.com"><img src="../img/3.png"/></a></li>
+		<li><a href="https://www.daum.net"><img src="../img/2.png"/></a></li>
+		<li><a href="https://www.nate.com"><img src="../img/1.gif"/></a></li>
+		<li><a href="https://www.samsung.com"><img src="../img/flower.png"/></a></li>
+		<li><a href="https://www.lg.com"><img src="../img/k1.jpg"/></a></li>
+		<li><a href="http://www.auction.co.kr/"><img src="../img/K6.jpg"/></a></li>
+	</ul>
+</div>
+<div>
+	<ul id="textInner">
+		<li>수천만 원에 이르는 전기차 배터리 고장과 사고가 잇따라 발생하면서 소비자 부담이 커지고 있다.<br/>
+			운전자 사이에서는 '외제차'보다 '전기차'를 주의해야 한다는 웃지 못할 이야기까지 나올 정도다.<br/></li>
+		<li>실제 지난달 26일 오전 7시 25분께 제주시 일도2동의 한 아파트 주차장에서 충전 중이던 코나 전기차에서 불이 났다.<br/>
+			다행히 인명피해는 발생하지 않았지만, 소방서 추산 2천540만원 상당의 재산피해가 났다.<br/></li>
+		<li>소방당국과 국립과학수사연구원은 현재 사고 원인을 조사 중으로, 감식 결과가 나오기까지 2달 이상이 걸릴 것으로 추정하고 있다.<br/>
+			코나차 제조사인 현대자동차는 이 화재 사고 원인이 제품 결함이라고 밝혀져야만 보상을 해준다는 입장이다.<br/></li>
+		<li>현대차 관계자는 "지난달 제주에서 발생한 코나 전기차 화재 사고는 현재 국과수 감식 중"이라며 "국과수 감식 결과에서 화재 원인이 배터리 문제로 밝혀지면 보상이 진행된다"고 말했다.<br/>
+			이 관계자는 "다만 감식 결과가 나오려면 시일이 오래 걸려 보통 일차적으로 보험 처리한 뒤 구상권을 청구하는 방식으로 보상이 이뤄진다"고 덧붙였다.<br/></li>
+		<li>제주에서 코나 전기차 화재가 발생한 지 8일 만에 대구에서 또 한 번 코나 전기차 화재가 발생했다. 2018년 4월 코나 전기차 출시 이후 12번째 화재 사고였다.</li>
+		<li>이날 고려대 온라인 커뮤니티 ‘고파스’에는 “개·돼지들아 너네들은 여행 안가야 우리 남편이 즐길 수 있어” “해외 여행 가지 말라면서 외교부 장관 남편이 요트 구입을 하러 미국을 가나” 
+			“내 동생은 유학 계획이 다 망가져 돌아왔다”며 강 장관 부부를 비판하는 글들이 올라왔다.	신혼 부부와 결혼 준비를 앞둔 20~30대가 주로 찾는 온라인 카페 등에서도 
+			“강경화 남편 보니까 여행 못 갈 것도 없는 것 같다” “지난 휴가동안 바보 같이 집콕한 내 자신이 원망스럽다” 
+			“돈 많고 힘이 있으니 남들 다 찔리는 코로나 시국에도 요트도 사고 욜로(YOLO·인생은 한번 뿐)도 가능하다”는 반응이 이어졌다.
+			올해 5월 결혼한 직장인 김모(30)씨는 “직장 생활 중 2주 자가 격리를 감당할 수 없어 신혼여행을 포기했는데 ‘내가 즐기는 것인데 뭐가 문제냐’며 대놓고 외유하는 
+			공직자의 배우자라는 사람의 말에 가슴이 답답해진다”고 했다. 김씨는 “솔선수범해야 할 사회 지도층 인사들이 자신들은 특별한 존재인 양 하나 둘씩 빠져나가니 
+			허탈한 국민들이 분노하는 것 아니냐”고 했다.</li>
+	</ul>
+</div>
+</body>
+</html>
